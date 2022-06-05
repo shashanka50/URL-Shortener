@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShortLink</title>
+    <style>
+        .shortlink>span{
+            font-family: cursive;
+            font-weight: bolder;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .shortlink{
+            text-align: center;
+            margin-top: 20%;
+        }
+        body{
+            justify-content: space-around;
+        }
+
+        button{
+            margin-top: 20px;
+            border-radius: 6px;
+            width: 100px;
+            height: 30px;
+            font-size: large;
+        }
+
+        button:hover{
+            box-shadow: 0px 0px 10px;
+        }
+    </style>
+    <script src="/static/index.js"></script>
+
+</head>
+
+<body>
+
+    <form action="{{url_for('copy_to_clipboard',url=url)}}">
+        <div class="shortlink">
+            <span>Short link is: <span id="shortlink">{{url}}</span></span> 
+            <br><button type="submit" name="submitbutton" onclick="copytext()">Copy</button>
+        </div>
+    </form>
+
+</body>
+</html>

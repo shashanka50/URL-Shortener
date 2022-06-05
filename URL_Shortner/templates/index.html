@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="\static\style.css">
+    
+</head>
+
+<body>
+
+    <h1 class="heading">
+        WELCOME TO URL SHORTNER
+    </h1>
+
+    <form action="{{url_for('submit')}}" method=post>
+
+        <div class="labels">
+            <label for="longurl">ENTER LONG URL HERE</label>
+        </div>
+
+        <div class="input">
+            <input type="text" placeholder="Long URL" name="longurl" id="longurl" style="text-align:center;" required>
+        </div>
+
+        <div class="labels">
+            <label for="ServiceProvider">SELECT SERVER</label>
+        </div>
+
+        <div>
+            <select name="ServiceProvider" id="serviceprovider" required>
+
+                <option value="tinyurl">Tinyurl</option>
+                <option value="chilpit">Chilpit</option>
+                <option value="dagd">DAGD</option>
+                <option value="isgd">ISGD</option>
+            
+            </select><br>
+        
+        </div>
+
+        <div class="button">
+            <button> Get ShortLink</button>
+        </div>
+    </form>
+
+   
+
+</body>
+</html>
