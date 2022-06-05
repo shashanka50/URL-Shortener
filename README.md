@@ -7,3 +7,6 @@ How to run on your local machine?
 * Type the command "pip install requirements.txt" and hit enter.
 * Python version suggested is in the file runtime.txt.
 * Then run the flask app by typing command "python app.py"
+
+
+If you want to use the service then go to : https://url-shortner-webapp.herokuapp.com/
