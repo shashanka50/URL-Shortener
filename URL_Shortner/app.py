@@ -12,10 +12,15 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+
+
+
 @app.route('/short/<path:url>/<string:sp>')
 def shortlink(url,sp):
-
     return render_template('shortlink.html',url=url,sp=sp)
+
+
+
 
 
 @app.route("/submit",methods=['GET','POST'])
@@ -58,9 +63,13 @@ def submit():
 
     return redirect(url_for('shortlink',url=small_link,sp=serviceprovider))
 
+
+
 @app.route('/copied/')
 def copy_to_clipboard():
     return render_template('copied.html')
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
