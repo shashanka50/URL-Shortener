@@ -7,7 +7,6 @@ from urllib.error import *
 
 app = Flask(__name__)
 
-
 @app.route('/home')
 @app.route('/')
 def home():
